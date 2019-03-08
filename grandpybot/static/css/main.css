@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'typewriter';
+    src: url("../font/TravelingTypewriter.ttf");
+}
+
+body {
+    background-color: #1d1d1d;
+    font-family: 'typewriter', serif;
+    padding: 10px;
+}
+
+a, header {
+    color: #114b7f;
+    text-align: center;
+}
+
+img {
+    vertical-align: middle;
+}
+
+footer {
+    text-align: center;
+    font-size: small;
+}
+
+/* Mobile Version - Base */
+@media only screen {
+
+    #headerMin600, #headerMin1200, #loading, #map, #separatorTop, #separatorBottom, #bookmark {
+        display: none;
+    }
+
+    #headerMin0 {
+        display: block;
+    }
+
+    /* Header */
+    header {
+        font-size: 24px;
+        padding-bottom: 10px;
+    }
+
+    /* Main Box */
+    #book {
+        flex-direction: row;
+        width: 85vw;
+        height: auto;
+        min-height: 250px;
+        margin: 0 auto;
+        border: 5px solid #114b7f;
+        border-radius: 5px;
+        padding: 5px;
+        background-color: whitesmoke;
+    }
+
+    /* Page "Left" (Top in this case) */
+    #pageLeft {
+        width: 95%;
+        height: auto;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #form {
+        text-align: center;
+        width: 100%;
+    }
+
+    #form > #formInput {
+        width: 75%;
+        margin: 5px auto;
+        text-align: center;
+    }
+
+    #loading {
+        margin: auto;
+        flex: 90%;
+    }
+
+    .spinner {
+        margin: 100px auto;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        font-size: 10px;
+    }
+
+    #map {
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+
+    #map > #mapTitle {
+        padding-bottom: 5px;
+    }
+
+    #map > #mapGoogle {
+        width: 100%;
+        height: 250px;
+    }
+
+    /* Page "Right" (Bottom in this case) */
+    #pageRight {
+        width: 95%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #wikiTitle {
+        margin: 10px 0 0 15px;
+    }
+
+    #wikiSummary {
+        text-align: justify;
+    }
+
+    #wikiSource {
+        font-style: italic;
+        text-align: right;
+    }
+}
+
+/* Mobile Version - 300 Pixels and more */
+@media only screen and (min-width: 550px) {
+
+    #headerMin0 {
+        display: none;
+    }
+
+    #headerMin600 {
+        display: block;
+    }
+
+    /* Header */
+    header {
+        font-size: 30px;
+        padding-bottom: 10px;
+    }
+}
+
+/* Computer Version / Wide screen / 1200 Pixels and more */
+@media only screen and (min-width: 1200px) {
+
+    #headerMin0, #headerMin600, #map, #loading {
+        display: none;
+    }
+
+    #headerMin1200, #separatorTop, #separatorBottom, #bookmark {
+        display: block;
+    }
+
+    /* Header */
+    header {
+        font-size: 60px;
+        padding-bottom: 0;
+    }
+
+    /* Main Box */
+    #book {
+        width: 1100px;
+        height: auto;
+        min-height: 600px;
+        margin: 0 auto;
+        padding: 15px;
+        border: 15px solid #114b7f;
+        border-radius: 15px;
+        display: flex;
+        background-color: whitesmoke;
+        justify-content: space-evenly;
+    }
+
+    /* Page Left */
+    #pageLeft {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        padding-right: 15px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-right: 1px solid #0a0a0a;
+    }
+
+    #form {
+        text-align: center;
+    }
+
+    #form > #formInput {
+        width: 75%;
+        margin: 5px auto;
+        text-align: center;
+    }
+
+    #loading {
+        margin: auto;
+        flex: 90%;
+    }
+
+    .spinner {
+        margin: 245px auto;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        font-size: 10px;
+    }
+
+    #map {
+        margin: auto;
+        text-align: center;
+    }
+
+    #map > #mapTitle {
+        position: sticky;
+        top: 10px;
+    }
+
+    #map > #mapGoogle {
+        width: 100%;
+        height: 519px;
+        position: sticky;
+        top: 37px;
+    }
+
+    /* Page Right */
+    #pageRight {
+        width: 100%;
+        padding-left: 15px;
+        display: flex;
+        flex-direction: column;
+        border-left: 1px solid #0a0a0a;
+    }
+
+    #wikiTitle {
+        margin: 0 0 10px 15px;
+    }
+
+    #wikiSummary {
+        text-align: justify;
+    }
+
+    #wikiSource {
+        font-style: italic;
+        text-align: right;
+    }
+
+    /* Footer */
+    footer {
+        position: relative;
+        top: -35px;
+    }
+
+    /* Decorators */
+    #separatorTop, #separatorBottom {
+        width: 34px;
+        height: 15px;
+        background-color: #114b7f;
+        border-left: 2px solid #0a0a0a;
+        border-right: 2px solid #0a0a0a;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    #separatorTop {
+        top: 15px
+    }
+
+    #separatorBottom {
+        top: -15px
+    }
+
+    #bookmark {
+        width: 70px;
+        height: 30px;
+        margin: 0 auto;
+        position: relative;
+        top: -30px;
+        left: 150px;
+        background: #ef4545;
+        border-top: 15px solid #ef4545;
+    }
+
+    #bookmark:after {
+        content: ' ';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        border-bottom: 13px solid #1d1d1d;
+        border-left: 35px solid transparent;
+        border-right: 35px solid transparent;
+    }
+}

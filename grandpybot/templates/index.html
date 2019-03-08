@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!--
+    CREDITS Logo :
+            By Freepik (https://www.freepik.com/)
+            From FlatIcon (https://www.flaticon.com/)
+            License CC 3.0 BY ("http://creativecommons.org/licenses/by/3.0/")
+    -->
+
+    <!-- Metas -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Clément Omont--Agnes">
+
+    <title>GrandPy Bot</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animation.css') }}">
+
+    <!-- FavIcon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='img/apple_touch_icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/favicon_32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicon_16x16.png') }}">
+
+    <!-- jQuery & custom scripts -->
+    <script src="{{ url_for('static', filename='js/jquery/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</head>
+
+<body>
+
+<header>
+    <p id="headerMin0">LES MÉMOIRES DE<br>GRANDPY B<img src="{{ url_for('static', filename='img/logo_32.png') }}" alt="Logo">T !</p>
+    <p id="headerMin600">LES MÉMOIRES DE GRANDPY B<img src="{{ url_for('static', filename='img/logo_64.png') }}" alt="Logo">T !</p>
+    <p id="headerMin1200">LES MÉMOIRES DE GRANDPY B<img src="{{ url_for('static', filename='img/logo_128.png') }}" alt="Logo">T !</p>
+</header>
+
+<div id="separatorTop"></div>
+
+<section id="book">
+    <section id="pageLeft">
+        <form id="form" method="post" novalidate>
+            <label id="formTitle" for="researchInput">Quel endroit GrandPy doit retrouver ?</label>
+            {{ form.hidden_tag() }}
+            {{ form.formInput(placeholder="Ex. Où se situe la Tour Eiffel ?") }}
+        </form>
+        <div id="loading">
+            <div class="spinner">
+                <div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+                <div class="rect5"></div>
+            </div>
+        </div>
+        <div id="map">
+            <h4 id="mapTitle"></h4>
+            <iframe id="mapGoogle" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+    <section id="pageRight">
+        <h4 id="wikiTitle"></h4>
+        <p id="wikiSummary">&emsp;Bienvenue à toi, humain !<br><br>
+            N'hésite pas à me poser une question de géographie dans la barre de recherches !<br>
+            Une fois que j'aurais analysé ta question, je te montrerai sur une carte l'emplacement qui y est associé.<br>
+            Tu trouveras également l'histoire du lieu, ou de ses environs,  si je l'ai déjà visité.<br><br>
+            Bon voyage !
+        </p>
+        <p id="wikiSource"></p>
+    </section>
+</section>
+
+<div id="separatorBottom"></div>
+<div id="bookmark"></div>
+
+<footer>
+    <p id="authorName"><a href="https://github.com/Clement-O/Projet_07" id="authorGit">Clément Omont--Agnes</a></p>
+</footer>
+
+</body>
+
+</html>
