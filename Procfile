@@ -1,1 +1,1 @@
-web: gunicorn grandpybot.py --log-file -
+web: gunicorn .grandpybot --log-file -
