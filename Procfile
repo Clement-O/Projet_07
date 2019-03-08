@@ -1,1 +1,1 @@
-web: python grandpy.py runserver 0.0.0.0:5000
+web: python grandpybot.py runserver 0.0.0.0:5000
