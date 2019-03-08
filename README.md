@@ -10,4 +10,4 @@ class Config(object):
 ```
 Without them, the script will simply fail. (It won't be able to initialize and query the Google Maps API).
 
-A live demo is available here : ADD_ADDRESS .
+A live demo is available here : https://grandpy-coa.herokuapp.com/ .
